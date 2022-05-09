@@ -65,12 +65,7 @@
                 android:layout_marginBottom="8dp"
                 android:onClick="OnClickMostrar"
                 android:text="Mostrar Locais de Doações" />
-
-
         </LinearLayout>
-
-
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@ public class Localizacoes extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
 
         setTitle(getIntent().getStringExtra("MESSAGE0"));
@@ -44,7 +45,7 @@ public class Localizacoes extends FragmentActivity implements OnMapReadyCallback
         LatLng hemo_franca = new LatLng(-20.5192955,-47.396441);
         mMap.addMarker(new MarkerOptions().position(hemo_franca).title("Hemocentro de Franca"));
 
-        LatLng my_position = new LatLng(-19.7186233,-47.9599519);
+        LatLng my_position = new LatLng(-19.7186284,-47.9577632);
         mMap.addMarker(new MarkerOptions().position(my_position).title("Sua Atual Localização"));
     }
 }

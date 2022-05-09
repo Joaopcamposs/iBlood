@@ -2,8 +2,6 @@ package iftm.edu.br.iblood;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DoeSangue extends AppCompatActivity {
 
@@ -33,7 +30,6 @@ public class DoeSangue extends AppCompatActivity {
         this.linear = findViewById(R.id.linear);
 
     }
-
 
     public void OnClickMostrar(View view){
         Intent intent = new Intent(this, Localizacoes.class);

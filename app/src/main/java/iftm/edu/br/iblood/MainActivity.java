@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_a, btn_b, btn_ab, btn_o, btn_sobre, btn_sangue;
     ImageView img_logo;
     private ArrayList<String> strList;
+    private ArrayList<String> strTitles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,33 +32,29 @@ public class MainActivity extends AppCompatActivity {
         this.btn_sobre = findViewById(R.id.btn_sobre);
         this.btn_sangue = findViewById(R.id.btn_sangue);
         this.strList = new ArrayList<>();
+        this.strTitles = new ArrayList<>();
+        this.strTitles.add("VANTAGENS"); this.strTitles.add("FRAQUEZAS"); this.strTitles.add("RISCOS PARA A SAÚDE"); this.strTitles.add("PERFIL DIETÉTICO");
+        this.strTitles.add("FATORES DE PERDA DE PESO"); this.strTitles.add("SUPLEMENTOS"); this.strTitles.add("EXERCÍCIOS");
     }
 
     public void OnClick_A(View view) {
         Intent intent = new Intent(this, DescricaoSangue.class);
         intent.putExtra("MESSAGE0", "iBlood - Tipo A");
+        intent.putExtra(DescricaoSangue.LIST_KEY2, this.strTitles);
         this.strList.clear();
-        this.strList.add("                     VANTAGENS:\n" +
-                "\n" +
-                "- Adapta - se bem a mudanças de dieta e de ambiente.\n" +
+        this.strList.add("- Adapta - se bem a mudanças de dieta e de ambiente.\n" +
                 "- O sistema imunológico preserva e metaboliza os nutrientes mais facilmente.\n");
 
-        this.strList.add("                     FRAQUEZAS:\n" +
-                "\n" +
-                "- Aparelho digestivo sensível.\n" +
+        this.strList.add("- Aparelho digestivo sensível.\n" +
                 "- Sistema imunológico vulnerável, aberto á invasão de micróbios.\n");
 
-        this.strList.add("            RISCOS PARA A SAÚDE:\n" +
-                "\n" +
-                "- Doenças do coração.\n" +
+        this.strList.add("- Doenças do coração.\n" +
                 "- Câncer.\n" +
                 "- Anemia.\n" +
                 "- Distúrbios do fígado e da vesícula.\n" +
                 "- Diabetes do tipo 1.\n");
 
-        this.strList.add("               PERFIL DIETÉTICO:\n" +
-                "\n" +
-                "- Vegetariano.\n" +
+        this.strList.add("- Vegetariano.\n" +
                 "- Hortaliças.\n" +
                 "- Tofu.\n" +
                 "- Frutos do mar.\n" +
@@ -66,15 +63,11 @@ public class MainActivity extends AppCompatActivity {
                 "- Leguminosas.\n" +
                 "- Frutas.\n");
 
-        this.strList.add("       FATORES DE PERDA DE PESO:\n" +
+        this.strList.add("- Evite: Carne, Laticínios, Feijão-mulatinho, Feijão-fradinho, Trigo.\n" +
                 "\n" +
-                "Evite: Carne, Laticínios, Feijão-mulatinho, Feijão-fradinho, Trigo.\n" +
-                "\n" +
-                "Benéficos: Óleo Vegetal, Alimentos de soja, Hortaliças, Abacaxi.\n");
+                "- Benéficos: Óleo Vegetal, Alimentos de soja, Hortaliças, Abacaxi.\n");
 
-        this.strList.add("                    SUPLEMENTOS:\n" +
-                "\n" +
-                "- Vitamina B12.\n" +
+        this.strList.add("- Vitamina B12.\n" +
                 "- Ácido fólico.\n" +
                 "- Vitamina C.\n" +
                 "- Vitamina E.\n" +
@@ -83,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 "- Quercetina.\n" +
                 "- Cardomariano.\n");
 
-        this.strList.add("                      EXERCÍCIOS:\n" +
-                "\n" +
-                "- Exercícios relaxantes, que facilitam a concentração como: Ioga, Tai Chi.\n");
+        this.strList.add("- Exercícios relaxantes, que facilitam a concentração como: Ioga, Tai Chi.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
 
@@ -117,25 +108,18 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DescricaoSangue.class);
         intent.putExtra("MESSAGE0", "iBlood - Tipo B");
         this.strList.clear();
-        this.strList.add("                     VANTAGENS:\n" +
-                "\n" +
-                "- Sistema imunológico forte.\n" +
+        intent.putExtra(DescricaoSangue.LIST_KEY2, this.strTitles);
+        this.strList.add("- Sistema imunológico forte.\n" +
                 "- Facilidade de adaptação a mudanças de dieta e de ambiente.\n" +
                 "- Sistema nervoso equilibrado.\n");
 
-        this.strList.add("                     FRAQUEZAS:\n" +
-                "\n" +
-                "- Não tem fraquezas naturais, mas o desequilíbrio causa tendência a doenças autoimunes e a viroses raras.\n");
+        this.strList.add("- Não tem fraquezas naturais, mas o desequilíbrio causa tendência a doenças autoimunes e a viroses raras.\n");
 
-        this.strList.add("              RISCOS PARA A SAÚDE:\n" +
-                "\n" +
-                "- Diabetes do tipo 1.\n" +
+        this.strList.add("- Diabetes do tipo 1.\n" +
                 "- Síndrome da fadiga crônica.\n" +
                 "- Doenças autoimunes - doença de Lou Gehrid, lúpus, esclerose múltipla.\n");
 
-        this.strList.add("                 PERFIL DIETÉTICO:\n" +
-                "\n" +
-                "- Onívoro equilibrado.\n" +
+        this.strList.add("- Onívoro equilibrado.\n" +
                 "- Carne (mas não frango) laticínios.\n" +
                 "- Cereais. \n" +
                 "- Feijões.\n" +
@@ -143,22 +127,16 @@ public class MainActivity extends AppCompatActivity {
                 "- Hortaliças.\n" +
                 "- Frutas.\n");
 
-        this.strList.add("        FATORES DE PERDA DE PESO:\n" +
-                "\n" +
-                "- Evite: Milho, Lentilha, Amendoim, Gergelim, Sementes, Trigo, Trigo-sarraceno.\n" +
+        this.strList.add("- Evite: Milho, Lentilha, Amendoim, Gergelim, Sementes, Trigo, Trigo-sarraceno.\n" +
                 "\n" +
                 "- Benéficos: Folhas, Ovos, Fígado, Chá de alcaçuz.\n");
 
-        this.strList.add("                    SUPLEMENTOS:\n" +
-                "\n" +
-                "- Magnésio.\n" +
+        this.strList.add("- Magnésio.\n" +
                 "- Alcaçuz.\n" +
                 "- Ginkgo.\n" +
                 "- Lecitina.\n");
 
-        this.strList.add("                     EXERCÍCIOS:\n" +
-                "\n" +
-                "- Exercícios físicos moderados com o equilíbrio mental como: Caminhada, Ciclismo, Tênis, Natação.\n");
+        this.strList.add("- Exercícios físicos moderados com o equilíbrio mental como: Caminhada, Ciclismo, Tênis, Natação.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
 
@@ -190,46 +168,33 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DescricaoSangue.class);
         intent.putExtra("MESSAGE0", "iBlood - Tipo AB");
         this.strList.clear();
-        this.strList.add("                     VANTAGENS:\n" +
-                " \n" +
-                "- Programado para as condições modernas.\n" +
+        intent.putExtra(DescricaoSangue.LIST_KEY2, this.strTitles);
+        this.strList.add("- Programado para as condições modernas.\n" +
                 "- Sistema imunológico altamente tolerante.\n" +
                 "- Combina os benefícios dos tipos A e B.\n");
 
-        this.strList.add("                     FRAQUEZAS:\n" +
-                " \n" +
-                "- Aparelho digestivo sensível.\n" +
+        this.strList.add("- Aparelho digestivo sensível.\n" +
                 "- Sistema imunológico excessivamente tolerante, o que permite a invasão de micróbios.\n" +
                 "- Reage negativamente às doenças que têm afinidade com os tipos A e B.\n");
 
-        this.strList.add("              RISCOS PARA A SAÚDE:\n" +
-                "\n" +
-                "- Doenças do coração.\n" +
+        this.strList.add("- Doenças do coração.\n" +
                 "- Câncer.\n" +
                 "- Anemia.\n");
 
-        this.strList.add("                 PERFIL DIETÉTICO:\n" +
-                "\n" +
-                "- Dieta mista, com moderação: Carne, Frutos do mar, Laticínios, tofu, feijões, leguminosas, cereais, hortaliças, frutas. \n");
+        this.strList.add("- Dieta mista, com moderação: Carne, Frutos do mar, Laticínios, tofu, feijões, leguminosas, cereais, hortaliças, frutas. \n");
 
-        this.strList.add("        FATORES DE PERDA DE PESO:\n" +
-                "\n" +
-                "- Evite: Carne vermelha, Feijão mulatinho, Feijão manteiga, Sementes de milho, Trigo-sarraceno.\n" +
+        this.strList.add("- Evite: Carne vermelha, Feijão mulatinho, Feijão manteiga, Sementes de milho, Trigo-sarraceno.\n" +
                 "\n" +
                 "- Benéficos: Tofu, Frutos do mar, Laticínios, Folhas, Algas marinhas, Abacaxi.\n");
 
-        this.strList.add("                    SUPLEMENTOS:\n" +
-                "\n" +
-                "- Vitamina C.\n" +
+        this.strList.add("- Vitamina C.\n" +
                 "- Pilriteiro.\n" +
                 "- Equinácia.\n" +
                 "- Valeriana.\n" +
                 "- Quercetina.\n" +
                 "- Cardomariano.\n");
 
-        this.strList.add("                      EXERCÍCIOS:\n" +
-                "\n" +
-                "- Exercícios relaxantes que facilitam a concentração como: Ioga, Tai chi.\n" +
+        this.strList.add("- Exercícios relaxantes que facilitam a concentração como: Ioga, Tai chi.\n" +
                 "\n" +
                 "- Combinados com exercícios físicos moderados como: Caminhada, Ciclismo, Tênis.\n");
 
@@ -262,47 +227,34 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DescricaoSangue.class);
         intent.putExtra("MESSAGE0", "iBlood - Tipo O");
         this.strList.clear();
-        this.strList.add("                    VANTAGENS:\n" +
-                "\n" +
-                "- Aparelho digestivo forte.\n" +
+        intent.putExtra(DescricaoSangue.LIST_KEY2, this.strTitles);
+        this.strList.add("- Aparelho digestivo forte.\n" +
                 "- Sistema imunológico forte.\n" +
                 "- Defesas naturais contra infecções.\n" +
                 "- Sistema programado para ter metabolismo eficaz e preservar os nutrientes.\n");
 
-        this.strList.add("                    FRAQUEZAS:\n" +
-                "\n" +
-                "- Intolerância a novas dietas e condições ambientais.\n" +
+        this.strList.add("- Intolerância a novas dietas e condições ambientais.\n" +
                 "- O sistema imunológico pode ser excessivamente ativo e atacar a sí mesmo.\n");
 
-        this.strList.add("           RISCOS PARA A SAÚDE:\n" +
-                "\n" +
-                "- Distúrbios na coagulação sanguínea.\n" +
+        this.strList.add("- Distúrbios na coagulação sanguínea.\n" +
                 "- Doenças inflamatórias – Artrite.\n" +
                 "- Baixa produção de hormônios da tiroide.\n" +
                 "- Úlceras, Alergias.\n");
 
-        this.strList.add("              PERFIL DIETÉTICO:\n" +
-                "\n" +
-                "- Muita proteína: Comedor de carnes.\n" +
+        this.strList.add("- Muita proteína: Comedor de carnes.\n" +
                 "- Carne, peixe, hortaliças, frutas.\n" +
                 "- Limitados: Cereais, feijões, leguminosas.\n");
 
-        this.strList.add("      FATORES DE PERDA DE PESO:\n" +
-                "\n" +
-                "- Evite: Trigo, milho, feijão mulatinho, feijão branco, miúdo, lentilhas, repolho, couve de Bruxelas, couve flor, folhas de mostarda.\n" +
+        this.strList.add("- Evite: Trigo, milho, feijão mulatinho, feijão branco, miúdo, lentilhas, repolho, couve de Bruxelas, couve flor, folhas de mostarda.\n\n" +
                 "- Benéficos: Alga marinha, frutos do mar, sal, fígado, carne vermelha, espinafre, brócolis.\n");
 
-        this.strList.add("                   SUPLEMENTOS:\n" +
-                "\n" +
-                "- Vitamina B.\n" +
+        this.strList.add("- Vitamina B.\n" +
                 "- Vitamina K.\n" +
                 "- Cálcio.\n" +
                 "- Iodo.\n" +
                 "- Alcaçuz.\n" +
                 "- Algas marinhas.\n");
-        this.strList.add("                      EXERCÍCIOS:\n" +
-                "\n" +
-                "- Exercícios físicos intensos, como: Aeróbicos, artes marciais, esporte em que haja contato com os adversários, corrida.\n");
+        this.strList.add("- Exercícios físicos intensos, como: Aeróbicos, artes marciais, esporte em que haja contato com os adversários, corrida.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
 

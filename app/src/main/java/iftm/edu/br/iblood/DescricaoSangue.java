@@ -17,7 +17,9 @@ import java.util.List;
 public class DescricaoSangue extends AppCompatActivity {
 
     public static final String LIST_KEY = "DescricaoSangue.LIST";
+    public static final String LIST_KEY2 = "DescricaoSangue2.LIST";
     private ArrayList<String> strList;
+    private ArrayList<String> strTitles;
     private CarouselView carouselView;
     Button btn_desjejum, btn_lancheManha, btn_almoco, btn_lancheTarde, btn_ceia, btn_sobre2;
 
@@ -28,12 +30,15 @@ public class DescricaoSangue extends AppCompatActivity {
         setTitle(getIntent().getStringExtra("MESSAGE0"));
 
         this.carouselView = findViewById(R.id.carousel);
+        this.strTitles = getIntent().getStringArrayListExtra(LIST_KEY2);
         this.strList = getIntent().getStringArrayListExtra(LIST_KEY);
         this.carouselView.setPageCount(this.strList.size());
         this.carouselView.setViewListener(new ViewListener() {
             @Override
             public View setViewForPosition(int position) {
                 View view = getLayoutInflater().inflate(R.layout.carousel_item, null);
+                TextView txt_title = view.findViewById(R.id.txt_title);
+                txt_title.setText(strTitles.get(position));
                 TextView txtStr = view.findViewById(R.id.txtStr);
                 txtStr.setText(strList.get(position));
                 return view;

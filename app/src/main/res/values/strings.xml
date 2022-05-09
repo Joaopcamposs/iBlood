@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">iBlood</string>
+    <string name="tipo_a">Tipo A</string>
+    <string name="tipo_b">Tipo B</string>
+    <string name="tipo_ab">Tipo AB</string>
+    <string name="tipo_o">Tipo O</string>
+    <string name="bem_vindo">Bem vindo ao iBlood!</string>
+    <string name="descricao">Descricao</string>
+    <string name="sobre">Sobre</string>
+    <string name="livro">Livro.pdf</string>
+</resources>

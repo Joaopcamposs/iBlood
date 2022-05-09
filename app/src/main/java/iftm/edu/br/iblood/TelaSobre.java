@@ -24,7 +24,6 @@ public class TelaSobre extends AppCompatActivity {
         this.txt_sobreDesc2 = findViewById(R.id.txt_sobreDesc2);
         this.txt_sobreDesc3 = findViewById(R.id.txt_sobreDesc3);
         this.img = findViewById(R.id.img);
-        this.scrollView = findViewById(R.id.scrollView);
-        txt_sobreDesc3.setText("   O iBlood foi desenvolvido pelo aluno do curso de Engenharia de Computação do IFTM:\n\n- João Pedro Vieira Campos      (6*Período)\n");
+        this.scrollView = findViewById(R.id.ScrollView);
     }
 }

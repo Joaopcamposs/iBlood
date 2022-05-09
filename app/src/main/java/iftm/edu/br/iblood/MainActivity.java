@@ -3,18 +3,11 @@ package iftm.edu.br.iblood;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.MessageQueue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.google.android.gms.location.LocationRequest;
-
-import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -95,6 +88,28 @@ public class MainActivity extends AppCompatActivity {
                 "- Exercícios relaxantes, que facilitam a concentração como: Ioga, Tai Chi.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
+
+        //msg desjejum
+        intent.putExtra("MESSAGE1", "- Bebida de soja / Café\n" +
+                "- Morango\n" +
+                "- Panqueca de aveia com banana e mel\n" +
+                "- Queijo fresco UHT\n");
+        //msg lanche manha
+        intent.putExtra("MESSAGE2", "- Melão com chia\n" +
+                "- Uva\n");
+        //msg almoco
+        intent.putExtra("MESSAGE3", "- Salada de alface com tomate\n" +
+                "- Tofu com legumes / Peixe grelhado \n" +
+                "- Arroz com feijão carioca\n" +
+                "- Suco de laranja\n" +
+                "- Sobremesa Abacaxi assado com canela\n");
+        //msg lanche tarde
+        intent.putExtra("MESSAGE4", "- Banana e maça com aveia, flocos");
+        //msg ceia
+        intent.putExtra("MESSAGE5", "- Geléia de frutas vermelhas\n" +
+                "- Torrada integral\n" +
+                "- Bebida de soja\n");
+
         startActivity(intent);
     }
 
@@ -146,6 +161,28 @@ public class MainActivity extends AppCompatActivity {
                 "- Exercícios físicos moderados com o equilíbrio mental como: Caminhada, Ciclismo, Tênis, Natação.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
+
+        //msg desjejum
+        intent.putExtra("MESSAGE1", "- Omelete de abobrinha\n" +
+                "- Suco de laranja / pêssego\n");
+        //msg lanche manha
+        intent.putExtra("MESSAGE2", "- Iogurte natural\n" +
+                "- Morango\n" +
+                "- Mix de castanhas\n");
+        //msg almoco
+        intent.putExtra("MESSAGE3", "- Salada de salpicão com passas\n" +
+                "- Bife á cavalo \n" +
+                "- Arroz com feijão \n" +
+                "- Suco de limão\n" +
+                "- Sobremesa sorvete de abacate\n");
+        //msg lanche tarde
+        intent.putExtra("MESSAGE4", "- Leite / Café / Chá de alcaçuz\n" +
+                "- Pão caseiro integral \n" +
+                "- Salada de frutas\n");
+        //msg ceia
+        intent.putExtra("MESSAGE5", "- Leite / Chá de alcaçuz\n" +
+                "- Torrada com ricota\n");
+
         startActivity(intent);
     }
 
@@ -197,6 +234,27 @@ public class MainActivity extends AppCompatActivity {
                 "- Combinados com exercícios físicos moderados como: Caminhada, Ciclismo, Tênis.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
+
+        //msg desjejum
+        intent.putExtra("MESSAGE1", "- Chá de Cardomariano\n" +
+                "- Panqueca de aveia com queijo \n" +
+                "- Frutas: Uva, Cereja, Melancia\n");
+        //msg lanche manha
+        intent.putExtra("MESSAGE2", "- Iogurte natural com amora\n" +
+                "- Mix de castanhas\n");
+        //msg almoco
+        intent.putExtra("MESSAGE3", "- Salada de alface, couve e chicória\n" +
+                "- Frango assado / Sushi / Tofu \n" +
+                "- Arroz com feijão \n" +
+                "- Suco de abacaxi\n" +
+                "- Sobremesa Morangos frescos\n");
+        //msg lanche tarde
+        intent.putExtra("MESSAGE4", "- Suco de couve com limão e acerola\n" +
+                "- Panqueca / Torrada / Pão integral\n");
+        //msg ceia
+        intent.putExtra("MESSAGE5", "- Leite / Chá de Valeriana\n" +
+                "- Torrada com pasta de amendoim\n");
+
         startActivity(intent);
     }
 
@@ -247,6 +305,27 @@ public class MainActivity extends AppCompatActivity {
                 "- Exercícios físicos intensos, como: Aeróbicos, artes marciais, esporte em que haja contato com os adversários, corrida.\n");
 
         intent.putExtra(DescricaoSangue.LIST_KEY, this.strList);
+
+        //msg desjejum
+        intent.putExtra("MESSAGE1", "- Vitamina \n" +
+                "- Panqueca com queijo fresco e geléia de uva\n");
+        //msg lanche manha
+        intent.putExtra("MESSAGE2", "- Salada de frutas ");
+        //msg almoco
+        intent.putExtra("MESSAGE3", "- Salada de brócolis com tomate\n" +
+                "- Frutos do mar / Carne vermelha\n" +
+                "- Arroz com feijão carioca temperado\n" +
+                "- Espinafre salteado no azeite de dendê\n" +
+                "- Suco de goiaba\n" +
+                "- Sobremesa chocolate barra 80% cacau\n");
+        //msg lanche tarde
+        intent.putExtra("MESSAGE4", "- Leite com aveia\n" +
+                "- Torrada \n" +
+                "- Fruta kiwi\n");
+        //msg ceia
+        intent.putExtra("MESSAGE5", "- Chá de alcaçuz\n" +
+                "- Torrada com geléia de manga\n");
+
         startActivity(intent);
     }
 

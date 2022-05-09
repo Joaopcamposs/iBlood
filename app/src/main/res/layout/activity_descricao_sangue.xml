@@ -2,27 +2,125 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".DescricaoSangue">
 
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carousel"
-        android:layout_width="410dp"
-        android:layout_height="400dp"
-        android:layout_marginTop="328dp"
-        android:background="@color/default_circle_indicator_stroke_color"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:background="#EBEBEB"
         app:fillColor="#FFFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:pageColor="#00000000"
         app:radius="6dp"
         app:slideInterval="10000"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Sugestões de Alimentação Diária"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_desjejum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="OnClickDesjejum"
+        android:text="Desjejum"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_lancheManha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_lancheTarde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="OnClickLancheTarde"
+        android:text="Lanche da\n Tarde"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ceia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_desjejum" />
+
+    <Button
+        android:id="@+id/btn_lancheManha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="OnClickLancheManha"
+        android:text="Lanche \n da Manhã"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_almoco"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_desjejum"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_almoco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="OnClickAlmoco"
+        android:text="Almoço e\n Jantar"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_lancheManha"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btn_ceia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="OnClickCeia"
+        android:text="Ceia"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sobre2"
+        app:layout_constraintStart_toEndOf="@+id/btn_lancheTarde"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lancheManha" />
+
+    <Button
+        android:id="@+id/btn_sobre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="OnClickSobre2"
+        android:text="@string/sobre"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_ceia"
+        app:layout_constraintTop_toBottomOf="@+id/btn_almoco" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@
     tools:context=".DoeSangue">
 
     <ScrollView
-        android:id="@+id/scrollView"
+        android:id="@+id/ScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbarStyle="insideOverlay"
@@ -18,10 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -43,21 +44,33 @@
                 android:id="@+id/img_tabela"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
                 app:srcCompat="@drawable/tabela_compatibilidade" />
 
             <TextView
                 android:id="@+id/txt_maisProximo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:text="@string/procure"
                 android:textAlignment="center"
                 android:textColor="#AC0000"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:visibility="visible" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="OnClickMostrar"
+                android:text="Mostrar Locais de Doações" />
+
+
         </LinearLayout>
+
+
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

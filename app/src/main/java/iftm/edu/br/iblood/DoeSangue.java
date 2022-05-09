@@ -1,22 +1,17 @@
 package iftm.edu.br.iblood;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
-import android.app.FragmentTransaction;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
+import android.widget.Toast;
 
 public class DoeSangue extends AppCompatActivity {
 
@@ -33,8 +28,17 @@ public class DoeSangue extends AppCompatActivity {
 
         this.txt_doeSangue = findViewById(R.id.txt_doeSangue);
         this.img_tabela = findViewById(R.id.img_tabela);
-        this.scrollView = findViewById(R.id.scrollView);
+        this.scrollView = findViewById(R.id.ScrollView);
         this.txt_maisProximo = findViewById(R.id.txt_maisProximo);
         this.linear = findViewById(R.id.linear);
+
+    }
+
+
+    public void OnClickMostrar(View view){
+        Intent intent = new Intent(this, Localizacoes.class);
+        intent.putExtra("MESSAGE0", "Localização de Doações");
+
+        startActivity(intent);
     }
 }
